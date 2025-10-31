@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍳 Recipe Dashboard</h1>
+            <p>Discover delicious recipes from around the world</p>
+        </header>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Recipes</h3>
+                <p id="total-recipes">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Prep Time</h3>
+                <p id="avg-prep-time">0 min</p>
+            </div>
+            <div class="stat-card">
+                <h3>Vegetarian Recipes</h3>
+                <p id="vegetarian-count">0</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search recipes by name..."
+                >
+            </div>
+            <div class="filter-container">
+                <select id="diet-filter">
+                    <option value="">All Diets</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten free">Gluten Free</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="recipes-container">
+            <div id="loading-message">Loading recipes...</div>
+            <div id="recipes-list" class="recipes-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
